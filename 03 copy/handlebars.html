@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handle Bars Javascript</title>
+</head>
+<!-- lit - handle bars the next generation 🤯-->
+<body>
+    
+    <div id="content"></div>
+
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+
+    <script id="cardTemplate" type="text/x-handlebars-template">
+        <div class="card">
+            <h1 id="title">{{ title }}</h1>
+            <p id="text">{{ text }}</p>
+            <img src="{{ imgUrl }}" alt="" id="image">
+        </div>
+    </script>
+    <script>
+        const template = Handlebars.compile("Handlebars <b>{{doesWhat: 'rocks!'' }}</b>");
+
+        const cardTemplate = Handlebars.compile(`
+        {{#each pokemons}}
+        <div class="card">
+            <h1 id="title">{{ title }}</h1>
+            <p class="text">{{ text }}</p>
+            {{#if imageUrl}}
+                <img src="{{ imgUrl }}" alt="" id="image">
+            {{else}}
+                <p>No Image</p>
+            {{/if}}
+        </div>
+        {{/each}}
+        `);
+
+        const cardTemplate2 = Handlebars.compile(document.getElementById("cardTemplate").innerHTML)
+
+        const info = {
+            title : "The Best",
+            text : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus commodi et tempora provident beatae ducimus, quod sit perferendis accusantium cupiditate neque officia voluptate eum autem, iure repellat quo sed ipsa.",
+            imgUrl : ""
+        };
+
+        const infos = {
+            "pokemons" : [
+            {
+                title : "The Best",
+                text : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui architecto provident",
+                imgUrl : "assets/matrix_1.webp"
+            },
+            {
+                title : "The Best of The Best",
+                text : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam qui architecto provident",
+                imgUrl : "assets/matrix_2.jpeg"
+            }
+            ]
+        }
+
+        document.getElementById("content").innerHTML = cardTemplate(info);
+
+    </script>
+</body>
+</html>
