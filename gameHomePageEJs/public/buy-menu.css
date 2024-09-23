@@ -1,0 +1,120 @@
+/* BUY MENU */
+.buy-page{
+  min-height: 110vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(./assets/5.jpeg);
+  background-color: yellow;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.buy-container {
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 5rem 1rem;
+  height: 100%;
+  background-color: #0a0a23;
+  gap: 2rem;
+}
+.buy-game{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.buy-cta {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3rem;
+  border-bottom: 1px solid purple;
+  text-align: center;
+  padding-bottom: 0.5rem;
+}
+
+.buy-game img {
+  width: 220px;
+  transition: transform 0.3s ease;
+  border: 3px solid yellow;
+  aspect-ratio: 3/4;
+}
+
+.buy-game img:hover{
+  transform: scale(1.05);
+}
+.buy-title{
+  font-weight: 400;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  text-align: center;
+}
+
+.sponsors {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1024px) {
+  .buy-container {
+    width: 90%;
+  }
+
+  .buy-cta {
+    font-size: 2.2rem;
+  }
+  .buy-title {
+    font-size: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .buy-container {
+    width: 95%;
+    padding: 3rem 1rem;
+  }
+  .buy-cta {
+    font-size: 2rem;
+  }
+
+  .buy-game img {
+    width: 180px;
+  }
+
+  .buy-title {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .buy-cta{
+    font-size: 1.8rem;
+  }
+
+  .buy-title{
+    font-size: 1.2rem;
+  }
+
+  .buy-game img{
+    width: 150px;
+  }
+  .sponsors{
+    gap: 1rem;
+  }
+}

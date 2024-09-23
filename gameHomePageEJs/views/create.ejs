@@ -1,0 +1,26 @@
+<%- include("./partials/head.ejs") %>
+<%- include("./partials/nav.ejs") %>
+
+<section class="create-blog-section">
+  <h1 class="section-title">BUAT BLOG</h1>
+  <form action="/blogs" method="POST">
+    <div class="form-group">
+      <label for="title">Blog Title:</label>
+      <input type="text" id="title" name="title" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="snippet">Snippet:</label>
+      <input type="text" id="snippet" name="snippet" required>
+    </div>
+    
+    <div class="form-group">
+      <label for="body">Body:</label>
+      <textarea id="body" name="body" rows="10" required></textarea>
+    </div>
+    
+    <button type="submit">Create Blog</button>
+  </form>
+</section>
+
+<%- include("./partials/footer.ejs") %>

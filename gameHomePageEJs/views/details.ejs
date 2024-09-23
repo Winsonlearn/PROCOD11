@@ -1,0 +1,15 @@
+<%- include("./partials/head.ejs") %>
+<%- include("./partials/nav.ejs") %>
+
+<section class="blog-details-section">
+  <h1 class="section-title"><%= blog.title %></h1>
+  <p class="article-date"><%= blog.createdAt %></p>
+  <p class="article-snippet"><%= blog.snippet %></p>
+  <img src="<%= blog.imageUrl %>" alt="Blog Image" class="blog-image">
+  <p class="article-body"><%= blog.body %></p>
+  
+
+  <a href="/news" class="back-link">Back to All Blogs</a>
+</section>
+
+<%- include("./partials/footer.ejs") %>

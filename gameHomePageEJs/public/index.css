@@ -1,0 +1,272 @@
+/* main */
+main {
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(rgb(201, 195, 195) 80%, black);
+  gap: 40%;
+  padding: 2rem;
+}
+
+
+main div{
+  display: flex;
+  gap: 0.2rem;
+  color: white;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.main-title {
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 20px white;
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+
+.main-title-2{
+  color: white;
+  text-transform: uppercase;
+  text-shadow: 2px 2px 5px white;
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+}
+
+.main-paragraph {
+  color: white;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 0.3rem;
+}
+
+.sponsors {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sponsors img {
+  width: 5rem;
+  aspect-ratio: 16/9;
+}
+
+.cta-information {
+  color: white;
+  text-transform: capitalize;
+}
+
+.cta-information:hover {
+  text-decoration: none;
+}
+
+/* game */
+.game-container {
+  width: 100%;
+  margin: 0 auto;
+  background-image: url(./assets/1.jpeg);
+  background-size: cover;
+  background-position: center;
+  border-bottom: 3px solid purple;
+  border-top: 3px solid purple;
+}
+
+.game-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+.game-card {
+  color: white;
+  padding: 1.5rem;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.game-title {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.game-text {
+  font-size: 1rem;
+  line-height: 1.5;
+  opacity: 0.9;
+}
+
+
+
+
+
+@media screen and (max-width: 768px) {
+  .game-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .game-title {
+    font-size: 1.2rem;
+  }
+
+  .game-text {
+    font-size: 0.85rem;
+  }
+}
+
+
+
+/* heroo */
+.hero-1, .hero-2 {
+  background-color: yellowgreen;
+  position: relative;
+  color: white;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  border-top: 3px solid purple;
+  border-bottom: 3px solid purple;
+}
+
+.hero-1-content, .hero-2-content {
+  width: 50%;
+  padding: 2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.hero-1-content {
+  margin-left: auto;
+}
+
+.hero-2-content {
+  margin-right: auto;
+}
+
+.hero-1-title, .hero-2-title {
+  font-size: 4rem;
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.hero-1-subtitle, .hero-2-subtitle {
+  color: yellow;
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-1-text, .hero-2-text {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-1-background, .hero-2-background {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+.hero-3 {
+  color: white;
+  text-align: center;
+  padding: 20px;
+  border-bottom: 3px solid purple;
+  border-top: 3px solid purple;
+}
+
+.hero-3-title {
+  font-size: 3rem;
+  margin-bottom: 0.2rem;
+  font-weight: small;
+}
+
+.hero-3-subtitle {
+  font-size: 2rem;
+  color: orange;
+}
+.hero-3-text{
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+}
+
+.update-boxes{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+.update-box {
+  width: 25%;
+  min-width: 150px;
+  height: 13vh;
+  background: url(./assets/4.jpeg);
+  color: white;
+}
+/* media queryy */
+@media screen and (max-width: 768px) {
+  .main-title {
+    font-size: 2.5rem;
+  }
+
+  .main-title-2 {
+    font-size: 1.2rem;
+  }
+
+  .hero-1, .hero-2 {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-1-content, .hero-2-content {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .hero-1-title, .hero-2-title {
+    font-size: 2.5rem;
+  }
+
+  .update-box {
+    width: calc(50% - 1rem);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .main-title {
+    font-size: 2rem;
+  }
+
+  .main-title-2{
+    font-size: 1rem;
+  }
+
+  .hero-1-title, .hero-2-title {
+    font-size: 2rem;
+  }
+
+  .hero-1-subtitle, .hero-2-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .update-box {
+    width: 100%;
+  }
+}

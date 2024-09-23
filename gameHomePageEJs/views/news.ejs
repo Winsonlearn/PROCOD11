@@ -1,0 +1,25 @@
+<%- include("./partials/head.ejs") %>
+<%- include("./partials/nav.ejs") %>
+
+<section class="blog-section-container">
+  <h1 class="section-title">LATEST POSTS</h1>
+  <% if (blogs.length > 0) { %>
+    <% blogs.forEach(blog => { %>
+      <div class="article-card">
+        <div class="article-thumbnail">
+          <img src="<%= blog.imageUrl %>" alt="Blog Image">
+        </div>
+        <div class="article-content">
+          <h2 class="article-title"><%= blog.title %></h2>
+          <p class="article-date"><%= blog.createdAt %></p>
+          <p class="article-snippet"><%= blog.snippet %></p>
+          <a href="/blogs/<%= blog._id %>" class="article-link">View Article</a> 
+        </div>
+      </div>
+    <% }) %>
+  <% } else { %>
+    <p class="no-articles-message">BLOG ANDA KOSONG!</p>
+  <% } %>
+</section>
+
+<%- include("./partials/footer.ejs") %>
